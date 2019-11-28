@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Books show</title>
+</head>
+<body>
+	<% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+<h1>Books 詳細</h1>
+	<div class="show-title">
+		<h2>title</h2>
+		<p><%= @book.title %></p>
+	</div>
+	<div class="show-body">
+		<h2>body</h2>
+		<p><%= @book.body %></p>
+	</div>
+
+	<%= link_to 'back', books_path %>
+	<%= link_to 'edit', edit_book_path %>
+
+
+</body>
+</html>
